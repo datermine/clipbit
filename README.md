@@ -93,12 +93,13 @@ APIs (UserDefaults for settings, file timestamps for cache pruning).
 |---|---|
 | Gradient start (top-left) | `#FFB347` tangerine |
 | Gradient end (bottom-right) | `#FF2E88` raspberry |
-| Outline and iconography | `#1E1B4B` ink navy |
+| Iconography | `#1E1B4B` ink navy |
 
-The logo is a tangerine-to-raspberry gradient square with the clipboard glyph and border in
-ink navy. The glyph is `content_paste` from the Material Icons font. Masters live in `internal/` (`logo.1024.png`, `logo.png`, `logo.128.png`); the App
-Store icon set in `Clipbit/Assets.xcassets` is derived from the 1024 master on Apple's macOS
-icon template.
+The logo is a tangerine-to-raspberry gradient square with the clipboard glyph in ink navy.
+The glyph is `content_paste` from the Material Icons font. Masters live in `internal/`: the
+`logo.noborder.*` set is the current mark and the source of the App Store icon set in
+`Clipbit/Assets.xcassets` (composed onto Apple's macOS icon template); the bordered `logo.*`
+set is the earlier variant.
 
 ## License
 
