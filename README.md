@@ -72,3 +72,7 @@ Set these environment variables when launching the Debug binary directly:
 
 Logs use the bundle identifier as subsystem:
 `/usr/bin/log stream --predicate 'subsystem == "com.datermine.Clipbit"' --level debug`.
+
+## License
+
+[MIT](LICENSE) © 2026 George Mike.
