@@ -457,12 +457,10 @@ final class StatusItemController: NSObject, NSPopoverDelegate {
         SettingsOpener.open()
     }
 
+    private static let projectURL = URL(string: "https://github.com/datermine/clipbit")!
+
     @objc private func showAbout() {
-        NSApp.activate(ignoringOtherApps: true)
-        NSApp.orderFrontStandardAboutPanel(options: [
-            .applicationName: "Clipbit",
-            .credits: NSAttributedString(string: "Shows what's on the clipboard, previews it on hover, and does the obvious thing on click."),
-        ])
+        NSWorkspace.shared.open(Self.projectURL)
     }
 
     @objc private func quit() {

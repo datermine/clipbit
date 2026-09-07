@@ -31,7 +31,7 @@ works without xcodegen installed).
 | Concealed (password managers) | `lock` | "Concealed by …" | — |
 
 Right-click (or ⌃-click) for Clear Clipboard, Copy as Plain Text, Thumbnail Mode,
-Launch at Login, Settings, About and Quit.
+Launch at Login, Settings, About (opens this repository) and Quit.
 
 ## Notes
 
