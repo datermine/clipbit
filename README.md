@@ -9,7 +9,7 @@ the popover and Settings. See [SPEC.md](SPEC.md) for the full design.
 Requires Xcode 16 or later (macOS 14.0 deployment target).
 
 ```sh
-make run          # builds Release into ./build and launches Clipbit.app
+make run          # builds Release into ./build and launches ClipBit.app
 make test         # runs the unit tests (classifier, text summaries, home-directory helpers)
 ```
 
@@ -39,13 +39,15 @@ Launch at Login, Settings, About (opens this repository) and Quit.
   rather than letting it collapse into a hidden section.
 - **Sandbox:** the app is sandboxed (`Supporting/Clipbit.entitlements`) and ready for the
   Mac App Store. Everything in the spec works sandboxed; nothing changes for Developer ID.
+- **Privacy:** nothing leaves your Mac except a favicon request while a URL preview is on
+  screen. See [PRIVACY.md](PRIVACY.md).
 - **Source app** in the footer is best-effort: it uses `org.nspasteboard.source` when the
   copying app declares it, otherwise the frontmost app at the moment the change was noticed.
 - **Favicons** are fetched only while the preview is on screen, never merely because a URL
   was copied.
 - Exported images/text for Preview and the editor live in `~/Library/Caches/<bundle id>/`
   (inside the sandbox container) and are pruned to the last five files.
-- The bundle identifier is `com.datermine.Clipbit`; change it in `project.yml`.
+- The bundle identifier is `com.georgemike.ClipBit`; change it in `project.yml`.
 - **Settings** is a SwiftUI `Settings` scene. It's opened from the menu via the responder
   chain; if that doesn't produce a window, the same view is shown in a plain window.
 
@@ -71,7 +73,19 @@ Set these environment variables when launching the Debug binary directly:
 | `CLIPBIT_DEBUG_SETTINGS=1` | Opens Settings after launch and logs the visible windows. |
 
 Logs use the bundle identifier as subsystem:
-`/usr/bin/log stream --predicate 'subsystem == "com.datermine.Clipbit"' --level debug`.
+`/usr/bin/log stream --predicate 'subsystem == "com.georgemike.ClipBit"' --level debug`.
+
+## Distribution
+
+The source here is free to build and use. The Mac App Store version is the same app, signed
+and kept up to date by Apple, and buying it supports development. `make release` archives,
+exports, and uploads to App Store Connect using an App Store Connect API key
+(`scripts/release-macos.sh`; `make release-dry` stops at a local `.pkg`). The key's `.p8`
+lives outside the repo and its key/issuer IDs come from an untracked `.release.env`
+(`ASC_KEY_ID`, `ASC_ISSUER_ID`). Signing is automatic
+for team `39M246A2UR`; the App Store icon set lives
+in `Clipbit/Assets.xcassets`, and `Clipbit/PrivacyInfo.xcprivacy` declares the required-reason
+APIs (UserDefaults for settings, file timestamps for cache pruning).
 
 ## License
 

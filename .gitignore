@@ -10,3 +10,7 @@ build/
 
 # macOS
 .DS_Store
+
+# App Store Connect API key + identifiers (see scripts/release-macos.sh)
+private_keys/
+.release.env

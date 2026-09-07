@@ -20,10 +20,12 @@
 		78BDDD58E28A392B3CCE723A /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FB7447BCCDCD6E206208D0 /* PreviewView.swift */; };
 		7D3502574645E85E1866D551 /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D487B95C8E94717B0A2E220 /* StatusItemController.swift */; };
 		8C5F47DBAF7F89686602C42A /* ClipboardMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC929B53878BA4450A6BE22F /* ClipboardMonitor.swift */; };
+		D1EBB92B3C11B36139E1D3F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A57CEA9754ECFEA3ABD835F /* Assets.xcassets */; };
 		D662C2799DE7D10D647C26BA /* ClipbitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E60FD15573B4F7E2867AAB2 /* ClipbitApp.swift */; };
 		D8EE850614D737CD7E308DBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BABC4523667F9A4C130374 /* AppDelegate.swift */; };
 		D9C7BD6A3C808AEA34CAAAC0 /* StatusIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B32DD3A562C0AA77B853170 /* StatusIcon.swift */; };
 		DF8DE590893E4E7F0F538423 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE099B04ADB7A5D6E824EE73 /* SettingsView.swift */; };
+		ECE6187E649D2C61E39D9D02 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = AF2C99FF81B0F783DB487B7C /* PrivacyInfo.xcprivacy */; };
 		EF7E5E5805CB751B7D4AB053 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551AF0B9BD63B2F3905E450 /* Preferences.swift */; };
 		FA77438090DB87236F4E1124 /* ClipboardClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8BAF27032A0ADA6F4911C8 /* ClipboardClassifier.swift */; };
 		FC359C6AFE251145335628BE /* ClipboardClassifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C086BD93EDA15C21AA52A85 /* ClipboardClassifierTests.swift */; };
@@ -52,12 +54,14 @@
 		4C55523E242B9ED7237E56EA /* HomeDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDirectory.swift; sourceTree = "<group>"; };
 		4E60FD15573B4F7E2867AAB2 /* ClipbitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipbitApp.swift; sourceTree = "<group>"; };
 		55BABC4523667F9A4C130374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5A57CEA9754ECFEA3ABD835F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C086BD93EDA15C21AA52A85 /* ClipboardClassifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardClassifierTests.swift; sourceTree = "<group>"; };
 		6B32DD3A562C0AA77B853170 /* StatusIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusIcon.swift; sourceTree = "<group>"; };
 		9F76B73B15E7F9210C20205D /* FaviconCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaviconCache.swift; sourceTree = "<group>"; };
 		A8361CC2C43D3F7D79650996 /* ExportCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportCache.swift; sourceTree = "<group>"; };
 		AB0C79C990FF64147807DB58 /* Clipbit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Clipbit.entitlements; sourceTree = "<group>"; };
 		AE099B04ADB7A5D6E824EE73 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AF2C99FF81B0F783DB487B7C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		BB84E9D5CADB8FEDFC61202C /* DebugHooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugHooks.swift; sourceTree = "<group>"; };
 		C38DEFA41D28A60C651B8302 /* ImageThumbnailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageThumbnailer.swift; sourceTree = "<group>"; };
 		C551AF0B9BD63B2F3905E450 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
@@ -143,7 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				55BABC4523667F9A4C130374 /* AppDelegate.swift */,
+				5A57CEA9754ECFEA3ABD835F /* Assets.xcassets */,
 				4E60FD15573B4F7E2867AAB2 /* ClipbitApp.swift */,
+				AF2C99FF81B0F783DB487B7C /* PrivacyInfo.xcprivacy */,
 				96EB00FBDE2224297C1A545F /* Controllers */,
 				61AD027BEE89D4A96DECBAC4 /* Debug */,
 				2DC340E006ECFA20F6E22E9F /* Model */,
@@ -198,6 +204,7 @@
 			buildConfigurationList = EDB2504426D3457DF7B999CC /* Build configuration list for PBXNativeTarget "Clipbit" */;
 			buildPhases = (
 				EFBE9CF63A9E72518D4E5094 /* Sources */,
+				4EBB29566351D0D9087B4E70 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -219,7 +226,12 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					6DBB6B75244CD6949354AB2D = {
+						DevelopmentTeam = 39M246A2UR;
+						ProvisioningStyle = Automatic;
+					};
 					DDFE78ADC18DAFBF2C894DAF = {
+						DevelopmentTeam = 39M246A2UR;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -243,6 +255,18 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4EBB29566351D0D9087B4E70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1EBB92B3C11B36139E1D3F2 /* Assets.xcassets in Resources */,
+				ECE6187E649D2C61E39D9D02 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3836ED80E4B6ED42110B8224 /* Sources */ = {
@@ -361,17 +385,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 39M246A2UR;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.datermine.ClipbitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.georgemike.ClipBitTests;
 				SDKROOT = macosx;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clipbit.app/Contents/MacOS/Clipbit";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClipBit.app/Contents/MacOS/ClipBit";
 			};
 			name = Release;
 		};
@@ -438,17 +463,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 39M246A2UR;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.datermine.ClipbitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.georgemike.ClipBitTests;
 				SDKROOT = macosx;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clipbit.app/Contents/MacOS/Clipbit";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClipBit.app/Contents/MacOS/ClipBit";
 			};
 			name = Debug;
 		};
@@ -457,14 +483,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Supporting/Clipbit.entitlements;
-				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 39M246A2UR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.datermine.Clipbit;
-				PRODUCT_NAME = Clipbit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.georgemike.ClipBit;
+				PRODUCT_MODULE_NAME = Clipbit;
+				PRODUCT_NAME = ClipBit;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -474,14 +501,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Supporting/Clipbit.entitlements;
-				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 39M246A2UR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.datermine.Clipbit;
-				PRODUCT_NAME = Clipbit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.georgemike.ClipBit;
+				PRODUCT_MODULE_NAME = Clipbit;
+				PRODUCT_NAME = ClipBit;
 				SDKROOT = macosx;
 			};
 			name = Release;

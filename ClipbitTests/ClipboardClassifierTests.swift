@@ -7,7 +7,7 @@ final class ClipboardClassifierTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        pasteboard = NSPasteboard(name: NSPasteboard.Name("com.datermine.Clipbit.tests.\(UUID().uuidString)"))
+        pasteboard = NSPasteboard(name: NSPasteboard.Name("com.georgemike.ClipBit.tests.\(UUID().uuidString)"))
     }
 
     override func tearDown() {
@@ -265,7 +265,7 @@ final class HomeDirectoryTests: XCTestCase {
     }
 
     func testTildePathOnTheClipboardIsDetectedAsFile() {
-        let pasteboard = NSPasteboard(name: NSPasteboard.Name("com.datermine.Clipbit.tests.\(UUID().uuidString)"))
+        let pasteboard = NSPasteboard(name: NSPasteboard.Name("com.georgemike.ClipBit.tests.\(UUID().uuidString)"))
         defer { pasteboard.releaseGlobally() }
         pasteboard.clearContents()
         pasteboard.setString("~", forType: .string)

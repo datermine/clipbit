@@ -1,6 +1,6 @@
 name: Clipbit
 options:
-  bundleIdPrefix: com.datermine
+  bundleIdPrefix: com.georgemike
   deploymentTarget:
     macOS: "14.0"
   createIntermediateGroups: true
@@ -21,13 +21,15 @@ targets:
         buildPhase: none
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.datermine.Clipbit
-        PRODUCT_NAME: Clipbit
+        PRODUCT_BUNDLE_IDENTIFIER: com.georgemike.ClipBit
+        PRODUCT_NAME: ClipBit
+        PRODUCT_MODULE_NAME: Clipbit
         INFOPLIST_FILE: Supporting/Info.plist
         CODE_SIGN_ENTITLEMENTS: Supporting/Clipbit.entitlements
         CODE_SIGN_STYLE: Automatic
-        CODE_SIGN_IDENTITY: "-"
+        DEVELOPMENT_TEAM: 39M246A2UR
         ENABLE_HARDENED_RUNTIME: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         COMBINE_HIDPI_IMAGES: YES
         LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks"
   ClipbitTests:
@@ -39,9 +41,14 @@ targets:
       - target: Clipbit
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.datermine.ClipbitTests
+        PRODUCT_BUNDLE_IDENTIFIER: com.georgemike.ClipBitTests
         GENERATE_INFOPLIST_FILE: YES
-        CODE_SIGN_IDENTITY: "-"
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: 39M246A2UR
+        # The product is ClipBit.app while the target stays Clipbit; xcodegen derives the
+        # host path from the target name, so spell it out.
+        TEST_HOST: $(BUILT_PRODUCTS_DIR)/ClipBit.app/Contents/MacOS/ClipBit
+        BUNDLE_LOADER: $(TEST_HOST)
 schemes:
   Clipbit:
     build:
