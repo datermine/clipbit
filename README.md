@@ -96,7 +96,7 @@ APIs (UserDefaults for settings, file timestamps for cache pruning).
 | Outline and iconography | `#1E1B4B` ink navy |
 
 The logo is a tangerine-to-raspberry gradient square with the clipboard glyph and border in
-ink navy. Masters live in `internal/` (`logo.1024.png`, `logo.png`, `logo.128.png`); the App
+ink navy. The glyph is `content_paste` from the Material Icons font. Masters live in `internal/` (`logo.1024.png`, `logo.png`, `logo.128.png`); the App
 Store icon set in `Clipbit/Assets.xcassets` is derived from the 1024 master on Apple's macOS
 icon template.
 
