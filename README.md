@@ -87,6 +87,19 @@ for team `39M246A2UR`; the App Store icon set lives
 in `Clipbit/Assets.xcassets`, and `Clipbit/PrivacyInfo.xcprivacy` declares the required-reason
 APIs (UserDefaults for settings, file timestamps for cache pruning).
 
+## Brand
+
+| Role | Hex |
+|---|---|
+| Gradient start (top-left) | `#FFB347` tangerine |
+| Gradient end (bottom-right) | `#FF2E88` raspberry |
+| Outline and iconography | `#1E1B4B` ink navy |
+
+The logo is a tangerine-to-raspberry gradient square with the clipboard glyph and border in
+ink navy. Masters live in `internal/` (`logo.1024.png`, `logo.png`, `logo.128.png`); the App
+Store icon set in `Clipbit/Assets.xcassets` is derived from the 1024 master on Apple's macOS
+icon template.
+
 ## License
 
 [MIT](LICENSE) © 2026 George Mike.
