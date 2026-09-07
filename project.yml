@@ -1,0 +1,58 @@
+name: Clipbit
+options:
+  bundleIdPrefix: com.datermine
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+  xcodeVersion: "16.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    SWIFT_STRICT_CONCURRENCY: minimal
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  Clipbit:
+    type: application
+    platform: macOS
+    sources:
+      - path: Clipbit
+      - path: Supporting
+        buildPhase: none
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.datermine.Clipbit
+        PRODUCT_NAME: Clipbit
+        INFOPLIST_FILE: Supporting/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Supporting/Clipbit.entitlements
+        CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_IDENTITY: "-"
+        ENABLE_HARDENED_RUNTIME: YES
+        COMBINE_HIDPI_IMAGES: YES
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks"
+  ClipbitTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: ClipbitTests
+    dependencies:
+      - target: Clipbit
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.datermine.ClipbitTests
+        GENERATE_INFOPLIST_FILE: YES
+        CODE_SIGN_IDENTITY: "-"
+schemes:
+  Clipbit:
+    build:
+      targets:
+        Clipbit: all
+        ClipbitTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - ClipbitTests
+    archive:
+      config: Release
