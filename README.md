@@ -4,6 +4,13 @@ A macOS menu bar app that shows *what kind of thing* is on the clipboard right n
 previews it on hover, and does the obvious action on click. No history, no windows beyond
 the popover and Settings. See [SPEC.md](SPEC.md) for the full design.
 
+## Demo
+
+[![Clipbit demo video](https://img.youtube.com/vi/EiOCy1I62SM/maxresdefault.jpg)](https://www.youtube.com/watch?v=EiOCy1I62SM)
+
+A short walkthrough of the icon, hover previews and click actions:
+[youtube.com/watch?v=EiOCy1I62SM](https://www.youtube.com/watch?v=EiOCy1I62SM).
+
 ## Build & run
 
 Requires Xcode 16 or later (macOS 14.0 deployment target).
